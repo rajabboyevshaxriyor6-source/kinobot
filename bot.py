@@ -15,6 +15,10 @@ CHANNEL_LINK = "https://t.me/kanal_nomi"
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 logging.basicConfig(level=logging.INFO)
+    inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[
+        [InlineKeyboardButton(text="A'zo bo'lish", url="https://t.me/o_zingizning_kanalingiz")]
+    ])
+
 
 conn = sqlite3.connect("kinobot.db", check_same_thread=False)
 cursor = conn.cursor()
